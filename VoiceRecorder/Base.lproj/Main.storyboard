@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VoiceRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSB-3A-yv1" customClass="SCSiriWaveFormViewSwift" customModule="VoiceRecorder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="102" width="414" height="794"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kps-bj-0Kr">
+                                <rect key="frame" x="30" y="44" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7un-qM-nU1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnActionToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KzC-CU-qk3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sSB-3A-yv1" firstAttribute="top" secondItem="kps-bj-0Kr" secondAttribute="bottom" constant="8" id="7La-iy-KhB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sSB-3A-yv1" secondAttribute="bottom" constant="-34" id="EHk-FJ-fWQ"/>
+                            <constraint firstItem="kps-bj-0Kr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MxT-cH-lWy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kps-bj-0Kr" secondAttribute="trailing" constant="30" id="iwx-l4-Rna"/>
+                            <constraint firstItem="kps-bj-0Kr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xov-iT-5M4"/>
+                            <constraint firstItem="sSB-3A-yv1" firstAttribute="centerX" secondItem="kps-bj-0Kr" secondAttribute="centerX" id="xs9-Cf-d58"/>
+                            <constraint firstItem="sSB-3A-yv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y9e-Kf-cuz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnButtonActionToggle" destination="kps-bj-0Kr" id="RGa-Ya-xKX"/>
+                        <outlet property="waveFormView" destination="sSB-3A-yv1" id="ae8-Lf-Tzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+</document>
